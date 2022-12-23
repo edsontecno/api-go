@@ -7,8 +7,7 @@ on:
         required: true    
       PASSWORD_DOCKER_HUB:
         required: true  
-      USER_DOCKER_HUB:  
-        required: true  
+     
 jobs:
 
   docker:
