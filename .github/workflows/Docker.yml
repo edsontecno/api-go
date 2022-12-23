@@ -21,7 +21,7 @@ jobs:
     - name: Docker Login
       uses: docker/login-action@v2.0.0
       with:
-        username: leonardosartorello
+        username: ${{ secrets.USER_DOCKER_HUB }}
         password: ${{ secrets.PASSWORD_DOCKER_HUB }}
         
         
@@ -32,4 +32,4 @@ jobs:
         file: ./Dockerfile
         push: true
     # List of tags
-        tags: leonardosartorello/go_ci:${{github.ref_name}}
+        tags: ${{ secrets.USER_DOCKER_HUB }}/api-go:latest
