@@ -13,7 +13,7 @@ jobs:
     - name: Docker Login
       uses: docker/login-action@v2.0.0
       with:
-        username: ${{ secrets.USER_DOCKER_HUB }}
+        username: edsontecno
         password: ${{ secrets.PASSWORD_DOCKER_HUB }}
       
     - name: Download a Build Artifact
