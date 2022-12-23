@@ -2,7 +2,13 @@ name: Docker
 
 on:
   workflow_call:
-
+    secrets:
+      USER_DOCKER_HUB:
+        required: true    
+      PASSWORD_DOCKER_HUB:
+        required: true  
+      USER_DOCKER_HUB:  
+        required: true  
 jobs:
 
   docker:
@@ -13,7 +19,7 @@ jobs:
     - name: Docker Login
       uses: docker/login-action@v2.0.0
       with:
-        username: edsontecno
+        username: ${{ secrets.USER_DOCKER_HUB }}
         password: ${{ secrets.PASSWORD_DOCKER_HUB }}
       
     - name: Download a Build Artifact
