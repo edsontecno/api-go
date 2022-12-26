@@ -13,7 +13,7 @@ jobs:
       uses: actions/download-artifact@v3.0.0
       with:
         name: programa
-        
+
     - uses: actions/checkout@v3    
 
     - name: Deploy to Staging server
@@ -39,5 +39,5 @@ jobs:
             export DBNAME=${{ secrets.DB_NAME}}
             export DBPORT=${{ secrets.DB_PORT }}
             export PORT=8000
-            chmod +x main
-            nohup ./main > nohup.out 2> nohup.err < /dev/null &
+            chmod +x application
+            nohup ./application > nohup.out 2> nohup.err < /dev/null &
