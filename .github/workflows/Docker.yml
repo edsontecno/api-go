@@ -2,11 +2,6 @@ name: Docker
 
 on:
   workflow_call:
-    secrets:
-      USER_DOCKER_HUB:
-        required: true    
-      PASSWORD_DOCKER_HUB:
-        required: true  
      
 jobs:
 
